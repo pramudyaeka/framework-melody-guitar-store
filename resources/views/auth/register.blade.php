@@ -1,7 +1,7 @@
 @extends('layouts.global')
 
 @section('title')
-Daftar | Melody Guitar Store
+Daftar || Melody Guitar Store
 @endsection
 
 @section('content')
