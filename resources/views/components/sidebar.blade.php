@@ -23,7 +23,7 @@
                   </svg>
                 <p class="text-xl font-medium text-white">Transaction</p>
             </a>
-            
+
         </div>
     <div>
         <a href="#" class="flex gap-4 items-center p-4 rounded-md hover:bg-blue-700  transition ease-out duration-150">
