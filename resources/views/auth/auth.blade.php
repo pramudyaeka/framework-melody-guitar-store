@@ -1,7 +1,7 @@
 @extends('layouts.global')
 
 @section('title')
-Masuk - Informatika | Universitas Mulawarman
+Masuk | Melody Guitar Store
 @endsection
 
 @section('content')
@@ -31,7 +31,15 @@ Masuk - Informatika | Universitas Mulawarman
                         <input type="password" name="password" placeholder="Password" class="w-full ps-12 pe-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
                     </div>
                     <div class="w-full flex justify-end mt-4">
-                        <a href="#" class=" text-sm text-end text-bluelight hover:font-medium">Forgot password?</a>
+                        <span class="text-sm">
+                            Don't have an account?
+                            <a href="{{ route('register') }}"
+                                class="text-sm text-end
+
+                        text-blue-900 hover:font-medium">
+                                Register here</a>
+                        </span>
+                        <a href="#" class=" text-sm text-end text-bluelight hover:font-medium ml-24">Forgot password?</a>
                     </div>
                 </form>
                 <a href="{{ route('admin.account') }}" class="w-full h-auto py-4 mt-16 text-white font-medium bg-bluelight rounded-md flex justify-center items-center hover:bg-blue-700">
