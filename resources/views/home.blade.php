@@ -1,0 +1,11 @@
+@extends('layouts.global')
+@section('content')
+    @include('components.navbar')
+    @include('components.hero')
+    @include('components.product')
+    @include('components.brand')
+    @include('components.garansi')
+    @include('components.faq')
+    @include('components.footer')
+    @include('components.script')
+@endsection
