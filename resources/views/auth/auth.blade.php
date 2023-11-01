@@ -43,7 +43,7 @@ Masuk || Melody Guitar Store
                     </div>
                 </form>
                 <a href="{{ route('admin.account') }}" class="w-full h-auto py-4 mt-16 text-white font-medium bg-bluelight rounded-md flex justify-center items-center hover:bg-blue-700">
-                    <button type="submit" class="">Masuk</button>
+                    <button type="submit" class="">Sign in</button>
                 </a>
             </div>
         </div>

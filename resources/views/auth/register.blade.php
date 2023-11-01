@@ -70,7 +70,7 @@ Daftar || Melody Guitar Store
                         <a href="#" class=" text-sm text-end text-blue-900 hover:font-medium">Forgot password?</a>
                     </div>
                     <button type="submit" class="w-full h-auto py-4 mt-16 text-white font-medium bg-blue-800 rounded-md flex justify-center items-center hover:bg-blue-700">
-                        Kirim
+                        Sign Up
                     </button>
                 </form>
             </div>
