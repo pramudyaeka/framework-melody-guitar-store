@@ -25,7 +25,6 @@
                                 <th scope="col" class="px-6 py-3">
                                     ID Produk
                                 </th>
-
                                 <th scope="col" class="px-6 py-3">
                                     Harga Total
                                 </th>
@@ -38,10 +37,7 @@
                             @foreach ($Transaksi as $trs)
                                 <tr class="bg-bluelight border-b">
                                     <th scope="row"
-                                        class="px-6 py-4 font-medium text-gray-900
-
-                        whitespace-nowrap">
-
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                         {{ $trs->id }}
                                     </th>
                                     <td class="px-6 py-4">
@@ -55,14 +51,9 @@
                                     <td class="px-6 py-4">
                                         <div class="w-full h-auto">
                                             <button
-                                                class="px-4 py-2 bg-yellow-300 rounded-md
-
-                        text">Edit</button>
-
+                                                class="px-4 py-2 bg-yellow-300 rounded-md text">Edit</button>
                                             <button
-                                                class="px-4 py-2 bg-red-600 rounded-md text
-
-                        text-white">Hapus</button>
+                                                class="px-4 py-2 bg-red-600 rounded-md text text-white">Hapus</button>
                                         </div>
                                     </td>
                                 </tr>

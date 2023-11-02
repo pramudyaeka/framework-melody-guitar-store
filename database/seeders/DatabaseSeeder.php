@@ -6,9 +6,7 @@ namespace Database\Seeders;
 use App\Models\Akun;
 use App\Models\Produk;
 use App\Models\Transaksi;
-use App\Models\Akun;
-use App\Models\Produk;
-use App\Models\Transaksi;
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

@@ -5,6 +5,7 @@ use App\Models\Produk;
 use App\Models\Transaksi;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,7 @@ use App\Http\Controllers\AuthController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 // Home
 Route::get('/', function () {
     return view('home');
@@ -35,7 +37,7 @@ Route::post('/login/action', [
 
 Route::get('/register', function () {
     return view('auth.register');
-    })->name('register');
+})->name('register');
 
 Route::post('/register/action', [
     AuthController::class, 'registerAction'
@@ -43,18 +45,30 @@ Route::post('/register/action', [
 
 Route::get('/logout', [
     AuthController::class, 'logout'
-    ])->name('logout');
+])->name('logout');
 
 // CRUD Admin
 
-Route::get('users/admin/account', function () {
-    return view('users/admin.account',["Akun"=>Akun::all()]);
-})->name('admin.account');
 
-Route::get('users/admin/product', function () {
-    return view('users/admin.product',["Produk"=>Produk::all()]);
-})->name('admin.product');
+Route::middleware('auth')->group(function () {
 
-Route::get('users/admin/transaction', function () {
-    return view('users/admin.transaction',["Transaksi"=>Transaksi::all()]);
-})->name('admin.transaction');
+    Route::get('/users/admin/account', function () {
+        return view('users/admin.account', ["Akun" => Akun::all()]);
+    })->name('admin.account');
+
+    Route::get('/users/admin/product', function () {
+        return view('users/admin.product', ["Produk" => Produk::all()]);
+    })->name('admin.product');
+
+    Route::get('users/admin/transaction', function () {
+        return view('users/admin.transaction', ["Transaksi" => Transaksi::all()]);
+    })->name('admin.transaction');
+
+    Route::controller(ProdukController::class)->group(function () {
+        Route::get('users/admin/product/add', 'add')->name('product.add');
+        Route::post('users/admin/product/add/action', 'store')->name('product.store');
+        Route::get('users/admin/product/edit/{id}', 'edit')->name('product.edit');
+        Route::post('users/admin/product/{id}/action', 'update')->name('product.update');
+        Route::post('users/admin/product/delete/{id}/action', 'delete')->name('product.delete');
+    });
+});

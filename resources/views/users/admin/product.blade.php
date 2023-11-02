@@ -13,7 +13,10 @@
                 <p class="text-4xl font-bold mb-4">Data Product</p>
                 <hr><br>
                 <div class="w-full h-auto flex justify-end">
-                    <button class="px-4 py-2 bg-green-600 rounded-md text text-white">Tambah</button>
+                    <a href = "{{ route('product.add') }}">
+                        <button class="px-4 py-2 bg-green-600 rounded-md text text-white">Tambah</button>
+                    </a>
+
                 </div><br>
                 <div class="relative overflow-x-auto">
                     <table class="w-full text-sm text-left text-dark font-bold">
@@ -60,20 +63,22 @@
                                         {{ $prd->stok }}
                                     </td>
                                     <td class="px-6 py-4">
-                                        {{ $prd->harga}}
+                                        {{ $prd->harga }}
                                     </td>
 
                                     <td class="px-6 py-4">
                                         <div class="w-full h-auto">
-                                            <button
-                                                class="px-4 py-2 bg-yellow-300 rounded-md
-
-                        text">Edit</button>
-
-                                            <button
+                                            <a href="{{ route('product.edit',$prd->id) }}">
+                                                <button class="px-4 py-2 bg-yellow-300 rounded-md text">Edit</button>
+                                            </a>
+                                            <form action="{{route('product.delete', $prd->id)}}" method="post">
+                                                @csrf
+                                            <button type="submit"
                                                 class="px-4 py-2 bg-red-600 rounded-md text
 
                         text-white">Hapus</button>
+                                            </form>
+
                                         </div>
                                     </td>
                                 </tr>

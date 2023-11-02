@@ -36,10 +36,10 @@ class AuthController extends Controller
             'password' => $request->password,
         ];
         if (Auth::attempt($data)) {
-            return redirect('users/admin/account');
+            return redirect('/users/admin/account');
         } else {
             session()->flash('error', 'Username atau Password anda salah!');
-            return redirect('/login');
+            return redirect('/auth');
         }
     }
     public function logout() {
