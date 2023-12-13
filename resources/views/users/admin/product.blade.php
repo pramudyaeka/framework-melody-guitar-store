@@ -12,9 +12,12 @@
             <div class="h-full m-4 p-8 bg-bluelight rounded-lg drop-shadow-md">
                 <p class="text-4xl font-bold mb-4">Data Product</p>
                 <hr><br>
-                <div class="w-full h-auto flex justify-end">
+                <div class="w-full h-auto flex justify-end gap-2">
                     <a href = "{{ route('product.add') }}">
                         <button class="px-4 py-2 bg-green-600 rounded-md text text-white">Tambah</button>
+                    </a>
+                    <a href = "{{ route('download.excel') }}">
+                        <button class="px-4 py-2 bg-green-600 rounded-md text text-white">Download</button>
                     </a>
 
                 </div><br>
@@ -37,6 +40,9 @@
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Harga
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Gambar
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Aksi
@@ -64,6 +70,9 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         {{ $prd->harga }}
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        {{ $prd->gambar }}
                                     </td>
 
                                     <td class="px-6 py-4">

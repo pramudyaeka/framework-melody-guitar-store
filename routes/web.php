@@ -70,5 +70,6 @@ Route::middleware('auth')->group(function () {
         Route::get('users/admin/product/edit/{id}', 'edit')->name('product.edit');
         Route::post('users/admin/product/{id}/action', 'update')->name('product.update');
         Route::post('users/admin/product/delete/{id}/action', 'delete')->name('product.delete');
+        Route::get('users/admin/download_excel','download_excel')->name('download.excel');
     });
 });
