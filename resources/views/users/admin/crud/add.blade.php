@@ -12,7 +12,7 @@
                 <h1 class="mb-5 mt-10 text-bluelight font-bold text-2xl">MELODY GUITAR STORE</h1>
             </div>
 
-            <div class="w-[70%] h-[22rem] flex-col bg-bluelight flex rounded-2xl">
+            <div class="w-[70%] h-[25rem] flex-col bg-bluelight flex rounded-2xl">
                 <p class="font-bold text-dark  text-2xl self-center mt-4">ADD PRODUCT</p>
                 <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
@@ -32,7 +32,7 @@
                         <p class="font-bold text-dark  text-xl mt-2 mr-[4.5rem]">Harga</p>
                         <input type="text" name="harga" placeholder="Harga" class="rounded-md pe-10 ps-8 ">
                     </div>
-                    <div class="flex flex-row gap-80 ml-24 mt-5">
+                    <div class="flex flex-row gap-[16rem] ml-24 mt-5">
                         <p class="font-bold text-dark  text-xl mt-2 mr-[3rem]">Gambar Produk</p>
                         <input type="file" name="gambar" class="rounded-md pe-10 ps-8">
                     </div>
